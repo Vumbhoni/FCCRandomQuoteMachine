@@ -10,12 +10,13 @@ const BtnPressActionCreator = () => {
 const Dashboard = (props) => {
     document.getElementsByTagName('body')[0].style.backgroundColor = props.color;
     document.getElementsByTagName('body')[0].style.color = props.color;
-    return(
-        <div id='quote-box' className={props.class}>
-            <p id='text'> {props.quote.quote} </p>
-            <span id='author'> - {props.quote.author}</span>
+
+    return (
+         <div id='quote-box' className={props.class}>
+            <p id='text'>“ {props.quote.text} ”</p>
+            <span id='author'> ― {props.quote.author}</span>
             <div>
-                <button id='new-quote' onClick={() => props.newquote()} style={{backgroundColor: props.color}}> New Quote </button>
+                <button id='new-quote' className='btn' onClick={() => props.newquote()} style={{backgroundColor: props.color}}> New Quote </button>
 
                 <a id="tweet-quote" href='https://twitter.com/intent/tweet?' className='btn'>
                     <i className="fa fa-twitter" aria-hidden="true"></i>
